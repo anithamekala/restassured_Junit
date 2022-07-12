@@ -15,6 +15,5 @@ public class DeleteById {
 		given().when().contentType(ContentType.JSON).accept(ContentType.JSON)
 				.delete(URI + "/" + id).then().statusCode(STATUS_CODE_NOT_FOUND)
 				.statusLine(STATUS_LINE_NOT_FOUND).log().body().extract().response();
-
 	}
 }
